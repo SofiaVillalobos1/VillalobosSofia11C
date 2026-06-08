@@ -1,0 +1,60 @@
+// C++ code
+// Librerias
+
+// Instancia de de objetos
+
+// Definición de PINES
+#define LEDR 11
+#define LEDA 10
+#define LEDV 9
+// Declaracion de Variables
+
+// Sofía Villalobos 11C
+void setup()
+{//Configurar inicial de Piner y asignacion de roles
+  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LEDR,OUTPUT);
+  pinMode(LEDA,OUTPUT);
+  pinMode(LEDV,OUTPUT);
+}
+
+void loop()
+{// Se programa el funcionamiento del circuito
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+ 
+  //Encender una LEDRGB rojo
+  analogWrite(LEDR,255);
+  analogWrite(LEDA,0);
+  analogWrite(LEDV,0);
+  delay(1000);
+  //Apagar led RGB
+  analogWrite(LEDR,0);
+  analogWrite(LEDA,0);
+  analogWrite(LEDV,0);
+  delay(1000);
+//Encender una LEDRGB azul
+  analogWrite(LEDR,0);
+  analogWrite(LEDA,255);
+  analogWrite(LEDV,0);
+  delay(1000);
+  //Apagar led RGB
+  analogWrite(LEDR,0);
+  analogWrite(LEDA,0);
+  analogWrite(LEDV,0);
+  delay(1000);
+//Encender una LEDRGB verde
+  analogWrite(LEDR,0);
+  analogWrite(LEDA,0);
+  analogWrite(LEDV,255);
+  delay(1000);
+  //Apagar led RGB
+  analogWrite(LEDR,0);
+  analogWrite(LEDA,0);
+  analogWrite(LEDV,0);
+  delay(1000);
+
+ 
+}
